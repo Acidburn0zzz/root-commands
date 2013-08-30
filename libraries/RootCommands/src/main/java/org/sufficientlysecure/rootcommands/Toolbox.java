@@ -376,7 +376,6 @@ public class Toolbox {
     /**
      * @param file
      *            String that represent the file, including the full path to the file and its name.
-     * @param followSymlinks
      * @return File permissions as String, for example: 777, returns null on error
      * @throws IOException
      * @throws TimeoutException
@@ -463,7 +462,7 @@ public class Toolbox {
      *            example: /system/etc/hosts
      * @param remountAsRw
      *            remounts the destination as read/write before writing to it
-     * @param preserveFileAttributes
+     * @param preservePermissions
      *            tries to copy file attributes from source to destination, if only cat is available
      *            only permissions are preserved
      * @return true if it was successfully copied
@@ -736,7 +735,7 @@ public class Toolbox {
     /**
      * This will tell you how the specified mount is mounted. rw, ro, etc...
      * 
-     * @param The
+     * @param path The
      *            mount you want to check
      * 
      * @return <code>String</code> What the mount is mounted as.
